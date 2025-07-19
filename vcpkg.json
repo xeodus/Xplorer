@@ -1,0 +1,11 @@
+{
+  "name": "codoctor",
+  "version": "0.1.0",
+  "dependencies": [
+    "curl",
+    "crow",
+    "nlohmann-json",
+    "fmt",
+    "catch2"
+  ]
+}

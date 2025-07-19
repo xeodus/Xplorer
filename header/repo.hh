@@ -1,7 +1,6 @@
 #pragma once
 #include <cstdint>
 #include <string>
-#include <expected>
 #include <vector>
 
 struct Repo {
@@ -9,5 +8,6 @@ struct Repo {
     std::string path;
 };
 
-std::expected<Repo, std::string> clone(std::string_view url);
-std::vector<std::string> diff(Repo& r, std::string_view old_sh);
+std::string run_command(const std::string& cmd);
+std::string get_head_sh(const std::string& repo_path);
+std::vector<std::string> changed_files(const std::string& repo_path, const std::string& old_sh);
